@@ -32,9 +32,6 @@ slim-lint:
   config: some/custom_path.yml
 ```
 
-Any source control related properites, like `churn`, will be ignored
-if not run within such a context.
-
 ## Ignoring Files
 
 You can ignore files in your `slim-lint.yml` config file.
