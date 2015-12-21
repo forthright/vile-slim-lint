@@ -3,7 +3,7 @@ let vile = require("@brentlintner/vile")
 
 let allowed = (file) => !!file.match(/\.slim$/)
 
-let slim_lint = (custom_config_path, all_file_paths) => {
+let slim_lint = (custom_config_path) => {
   let opts = {}
 
   opts.args = ["-r", "json"]
@@ -40,8 +40,7 @@ let punish = (plugin_data) => {
     { read_data: false }
   )
   .then((all_files) => {
-    let all_file_paths = all_files.map((issue) => issue.file)
-    return slim_lint(plugin_data.config, all_file_paths)
+    return slim_lint(plugin_data.config)
       .then((cli_json) => {
         var issues = _.get(cli_json, "files", [])
         return _.flatten(issues.map(vile_issues))
