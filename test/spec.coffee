@@ -65,7 +65,7 @@ describe "slim-lint", ->
               .calledWith "slim-lint", args: [
                               "-r"
                               "json"
-                              process.cwd()
+                              "."
                             ]
             done()
           , 1
@@ -84,7 +84,7 @@ describe "slim-lint", ->
                               "json"
                               "-c"
                               config_path
-                              process.cwd()
+                              "."
                             ]
               done()
             , 1

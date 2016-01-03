@@ -12,7 +12,7 @@ let slim_lint = (custom_config_path) => {
     opts.args = opts.args.concat("-c", custom_config_path)
   }
 
-  opts.args = opts.args.concat(process.cwd())
+  opts.args = opts.args.concat(".")
 
   return vile
     .spawn("slim-lint", opts)
