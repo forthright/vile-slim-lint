@@ -1,7 +1,8 @@
 let _ = require("lodash")
 let vile = require("@brentlintner/vile")
 
-let allowed = (file) => !!file.match(/\.slim$/)
+let to_json = (string) =>
+  _.attempt(JSON.parse.bind(null, string))
 
 let slim_lint = (custom_config_path) => {
   let opts = {}
@@ -16,13 +17,13 @@ let slim_lint = (custom_config_path) => {
 
   return vile
     .spawn("slim-lint", opts)
-    .then((stdout) => stdout ?  JSON.parse(stdout) : { files: [] })
+    .then((stdout) => stdout ? to_json(stdout) : { files: [] })
 }
 
 let vile_issues = (file) =>
   _.get(file, "offenses", []).map((offense) => {
-    let severity = offense.severity == "warning" ? vile.WARNING : vile.ERROR
     let line = _.get(offense, "location.line")
+    let severity = offense.severity == "warning" ? vile.WARNING : vile.ERROR
     return vile.issue(
       severity,
       file.path,
@@ -31,27 +32,15 @@ let vile_issues = (file) =>
     )
   })
 
-// TODO: too complex
-let punish = (plugin_data) => {
-  return vile.promise_each(
-    process.cwd(),
-    allowed,
-    (filepath) => vile.issue(vile.OK, filepath),
-    { read_data: false }
-  )
-  .then((all_files) => {
-    return slim_lint(plugin_data.config)
-      .then((cli_json) => {
-        var issues = _.get(cli_json, "files", [])
-        return _.flatten(issues.map(vile_issues))
-      })
-      .then((issues) => {
-        return _.reject(all_files, (file) => {
-          return _.any(issues, (issue) => issue.file == file.file)
-        }).concat(issues)
-      })
-  })
-}
+let punish = (plugin_data) =>
+  slim_lint(plugin_data.config)
+    .then((cli_json) =>
+      _.flatten(
+        _.get(cli_json, "files", [])
+          .map(vile_issues)
+      )
+   )
+
 
 module.exports = {
   punish: punish
