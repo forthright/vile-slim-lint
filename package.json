@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "compile": "babel -d lib -m common src",
+    "compile-dev": "bin/compile-dev",
     "dev": "bin/dev",
     "test": "bin/test",
     "test-cov": "bin/test-cov"

@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+coffee -cwbo .test test
