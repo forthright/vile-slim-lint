@@ -1,3 +1,8 @@
 machine:
   node:
     version: 4.2.4
+
+dependencies:
+  post:
+    - npm run compile
+    - npm run compile-dev
