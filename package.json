@@ -13,7 +13,8 @@
     "compile-dev": "bin/compile-dev",
     "dev": "bin/dev",
     "test": "bin/test",
-    "test-cov": "bin/test-cov"
+    "test-cov": "bin/test-cov",
+    "vile": "vile -cpd --nodecorations"
   },
   "keywords": [
     "vile",
@@ -29,15 +30,15 @@
   "devDependencies": {
     "@brentlintner/vile-coffeelint": "0.0.4",
     "@brentlintner/vile-comment": "0.0.4",
-    "@brentlintner/vile-coverage": "^0.1.5",
-    "@brentlintner/vile-depcheck": "0.0.2",
+    "@brentlintner/vile-coverage": "^0.1.6",
+    "@brentlintner/vile-depcheck": "0.0.3",
     "@brentlintner/vile-eclint": "0.0.2",
     "@brentlintner/vile-eslint": "0.0.3",
     "@brentlintner/vile-fs-lint": "^0.1.1",
     "@brentlintner/vile-git": "^0.1.0",
     "@brentlintner/vile-jshint": "0.0.2",
     "@brentlintner/vile-language": "0.0.4",
-    "@brentlintner/vile-license": "0.0.2",
+    "@brentlintner/vile-license": "0.0.3",
     "@brentlintner/vile-ncu": "0.0.4",
     "@brentlintner/vile-newline": "0.0.2",
     "@brentlintner/vile-project": "0.0.2",

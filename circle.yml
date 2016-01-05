@@ -6,3 +6,7 @@ dependencies:
   post:
     - npm run compile
     - npm run compile-dev
+
+test:
+  post:
+    - npm run vile

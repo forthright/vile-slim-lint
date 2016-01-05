@@ -18,10 +18,18 @@ vile:
       ".vilerc"
     ]
 
+coverage:
+  config:
+    path: coverage/lcov.info
+
 length:
   config:
     file: 250
     line: 80
+
+jshint:
+  config: .jshintrc
+  ignore: .jshintignore
 
 depcheck:
   config:
