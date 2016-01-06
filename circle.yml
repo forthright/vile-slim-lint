@@ -9,6 +9,6 @@ dependencies:
 
 test:
   override:
-    - npm run text-cov
+    - npm run test-cov
   post:
     - npm run vile
