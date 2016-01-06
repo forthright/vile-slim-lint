@@ -8,5 +8,7 @@ dependencies:
     - npm run compile-dev
 
 test:
+  override:
+    - npm run text-cov
   post:
     - npm run vile
