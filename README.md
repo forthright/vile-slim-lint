@@ -25,9 +25,10 @@ Note: A good strategy is to use [bundler](http://bundler.io).
 
 ## Config
 
-Supported thresholds are applied per file.
+By default, `.slim-lint.yml` should be picked up without any
+extra config.
 
-Example:
+You can specify a custom path as well:
 
 ```yml
 slim-lint:
@@ -36,7 +37,7 @@ slim-lint:
 
 ## Ignoring Files
 
-You can ignore files in your `slim-lint.yml` config file.
+You can ignore files in your `.slim-lint.yml` config file.
 
 ## Architecture
 
