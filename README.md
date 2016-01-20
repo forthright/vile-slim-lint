@@ -1,6 +1,4 @@
-# vile-slim-lint
-
-[![Circle CI](https://circleci.com/gh/brentlintner/vile-slim-lint.svg?style=svg&circle-token=1f9abaf70a595024e47e9f5163e4bc7cca2a4fad)](https://circleci.com/gh/brentlintner/vile-slim-lint)
+# vile-slim-lint [![Circle CI](https://circleci.com/gh/brentlintner/vile-slim-lint.svg?style=svg&circle-token=1f9abaf70a595024e47e9f5163e4bc7cca2a4fad)](https://circleci.com/gh/brentlintner/vile-slim-lint)
 
 A [vile](http://github.com/brentlintner/vile) plugin for
 [slim-lint](https://github.com/sds/slim-lint).

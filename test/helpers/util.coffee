@@ -7,25 +7,28 @@ setup = (vile) ->
 
 issues = [
   {
-    file: "app/views/auth_tokens/_form.html.slim",
-    msg: "Some global issue",
+    path: "app/views/auth_tokens/_form.html.slim",
+    title: "Some global issue",
+    message: "Some global issue",
     type: "error",
-    where: { end: {}, start: { } },
-    data: {}
+    signature: "slim-lint::Some global issue",
+    where: undefined
   }
   {
-    file: "app/views/auth_tokens/edit.html.slim",
-    msg: "Use 2 spaces for indentation in a hash...",
-    type: "warn",
-    where: { end: {}, start: { line: 5 } },
-    data: {}
+    path: "app/views/auth_tokens/edit.html.slim",
+    title: "Use 2 spaces for indentation in a hash...",
+    message: "Use 2 spaces for indentation in a hash...",
+    signature: "slim-lint::Use 2 spaces for indentation in a hash...",
+    type: "style",
+    where: { start: { line: 5 } }
   }
   {
-    file: "app/views/auth_tokens/edit.html.slim",
-    msg: "Line is too long. [89\/80]",
-    type: "warn",
-    where: { end: {}, start: { line: 11 } },
-    data: {}
+    path: "app/views/auth_tokens/edit.html.slim",
+    title: "Line is too long. [89\/80]",
+    message: "Line is too long. [89\/80]",
+    type: "style",
+    signature: "slim-lint::Line is too long. []",
+    where: { start: { line: 11 } }
   }
 ]
 
