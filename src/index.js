@@ -1,5 +1,5 @@
 let _ = require("lodash")
-let vile = require("@brentlintner/vile")
+let vile = require("@forthright/vile")
 
 let to_json = (string) =>
   _.attempt(JSON.parse.bind(null, string))
