@@ -1,5 +1,7 @@
 # vile-slim-lint [![Circle CI](https://circleci.com/gh/brentlintner/vile-slim-lint.svg?style=svg&circle-token=1f9abaf70a595024e47e9f5163e4bc7cca2a4fad)](https://circleci.com/gh/brentlintner/vile-slim-lint)
 
+[![score-badge](http://joffrey-baratheon.herokuapp.com/brentlintner/vile-slim-lint/badges/score?token=9Gu6poQq8zVoeGTszNUR)](http://joffrey-baratheon.herokuapp.com/brentlintner/vile-slim-lint) [![security-badge](http://joffrey-baratheon.herokuapp.com/brentlintner/vile-slim-lint/badges/security?token=9Gu6poQq8zVoeGTszNUR)](http://joffrey-baratheon.herokuapp.com/brentlintner/vile-slim-lint) [![coverage-badge](http://joffrey-baratheon.herokuapp.com/brentlintner/vile-slim-lint/badges/coverage?token=9Gu6poQq8zVoeGTszNUR)](http://joffrey-baratheon.herokuapp.com/brentlintner/vile-slim-lint) [![dependency-badge](http://joffrey-baratheon.herokuapp.com/brentlintner/vile-slim-lint/badges/dependency?token=9Gu6poQq8zVoeGTszNUR)](http://joffrey-baratheon.herokuapp.com/brentlintner/vile-slim-lint)
+
 A [vile](http://github.com/brentlintner/vile) plugin for
 [slim-lint](https://github.com/sds/slim-lint).
 
