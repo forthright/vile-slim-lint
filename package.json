@@ -23,7 +23,7 @@
     "ruby"
   ],
   "dependencies": {
-    "@forthright/vile": "~0.5.14",
+    "@forthright/vile": "~0.5.18",
     "bluebird": "~3.3.0",
     "lodash": "^3.10.1"
   },
