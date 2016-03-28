@@ -14,7 +14,7 @@
     "dev": "bin/dev",
     "test": "bin/test",
     "test-cov": "bin/test-cov",
-    "vile": "vile -cspd --nodecorations"
+    "vile": "vile -csipd --nodecorations"
   },
   "keywords": [
     "vile",
