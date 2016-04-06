@@ -35,9 +35,23 @@ slim-lint:
   config: some/custom_path.yml
 ```
 
+You can also specify an `allow` list which is passed to `slim-lint`.
+
+```yml
+slim-lint:
+  allow: [ "app", "spec" ]
+```
+
 ## Ignoring Files
 
 You can ignore files in your `.slim-lint.yml` config file.
+
+You can also use the `allow` setting:
+
+```yml
+slim-lint:
+  ignore: [ "lib" ]
+```
 
 ## Architecture
 

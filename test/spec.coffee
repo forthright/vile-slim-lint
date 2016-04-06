@@ -29,7 +29,7 @@ describe "slim-lint", ->
         .punish {}
         .should.eventually.eql []
 
-    it "calls slim-lint in the cwd", (done) ->
+    it "calls slim-lint as json, with no color", (done) ->
       slim_lint
         .punish {}
         .should.be.fulfilled.notify ->
@@ -38,10 +38,9 @@ describe "slim-lint", ->
               .calledWith "slim-lint", args: [
                               "-r"
                               "json"
-                              "."
+                              "--no-color"
                             ]
             done()
-          , 1
 
     describe "with a custom config path", ->
       it "passes the path as a slim-lint cli option", (done) ->
@@ -57,7 +56,39 @@ describe "slim-lint", ->
                               "json"
                               "-c"
                               config_path
-                              "."
+                              "--no-color"
                             ]
               done()
-            , 1
+
+    describe "with an ignore list", ->
+      it "passes the exclude option as a slim-lint cli option", (done) ->
+        slim_lint
+          .punish ignore: ["foo", "bar"]
+          .should.be.fulfilled.notify ->
+            setTimeout ->
+              vile.spawn.should.have.been
+                .calledWith "slim-lint", args: [
+                              "-r"
+                              "json"
+                              "-e"
+                              "foo"
+                              "bar"
+                              "--no-color"
+                            ]
+              done()
+
+    describe "with an allow list", ->
+      it "passes the file args to slim-lint", (done) ->
+        slim_lint
+          .punish allow: ["foo", "bar"]
+          .should.be.fulfilled.notify ->
+            setTimeout ->
+              vile.spawn.should.have.been
+                .calledWith "slim-lint", args: [
+                              "-r"
+                              "json"
+                              "--no-color"
+                              "foo"
+                              "bar"
+                            ]
+              done()

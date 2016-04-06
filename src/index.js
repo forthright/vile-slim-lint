@@ -4,7 +4,10 @@ let vile = require("@forthright/vile")
 let to_json = (string) =>
   _.attempt(JSON.parse.bind(null, string))
 
-let slim_lint = (custom_config_path) => {
+let slim_lint = (plugin_config) => {
+  let custom_config_path = _.get(plugin_config, "config")
+  let paths = _.get(plugin_config, "allow", [])
+  let exclude = _.get(plugin_config, "ignore", [])
   let opts = {}
 
   opts.args = ["-r", "json"]
@@ -13,7 +16,13 @@ let slim_lint = (custom_config_path) => {
     opts.args = opts.args.concat("-c", custom_config_path)
   }
 
-  opts.args = opts.args.concat(".")
+  if (!_.isEmpty(exclude)) {
+    opts.args = _.concat(opts.args, "-e", exclude)
+  }
+
+  opts.args.push("--no-color")
+
+  if (!_.isEmpty(paths)) opts.args = _.concat(opts.args, paths)
 
   return vile
     .spawn("slim-lint", opts)
@@ -46,7 +55,7 @@ let vile_issues = (file) =>
     }))
 
 let punish = (plugin_data) =>
-  slim_lint(plugin_data.config)
+  slim_lint(plugin_data)
     .then((cli_json) =>
       _.flatten(
         _.get(cli_json, "files", [])
