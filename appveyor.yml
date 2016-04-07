@@ -53,6 +53,8 @@ install:
   - npm install
 
 test_script:
+  - npm run compile
+  - npm run compile-dev
   - npm run test-cov
 
 notifications:
