@@ -29,8 +29,8 @@ platform:
   - x86
   - x64
 
-matrix:
-  fast_finish: true
+#matrix:
+#  fast_finish: true
 
 init:
   - git config --global core.autocrlf input
