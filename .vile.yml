@@ -16,7 +16,7 @@ vile:
     - .npmrc
     - README.md
     - .vile.yml
-    - .viler
+    - .vilerc
 
 coverage:
   config:
@@ -24,7 +24,7 @@ coverage:
 
 length:
   config:
-    file: 250
+    file: 150
     line: 80
 
 depcheck:

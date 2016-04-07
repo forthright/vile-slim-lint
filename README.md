@@ -1,4 +1,4 @@
-# vile-slim-lint [![Circle CI](https://circleci.com/gh/brentlintner/vile-slim-lint.svg?style=svg&circle-token=1f9abaf70a595024e47e9f5163e4bc7cca2a4fad)](https://circleci.com/gh/brentlintner/vile-slim-lint)
+# vile-slim-lint [![Circle CI](https://circleci.com/gh/brentlintner/vile-slim-lint.svg?style=svg&circle-token=1f9abaf70a595024e47e9f5163e4bc7cca2a4fad)](https://circleci.com/gh/brentlintner/vile-slim-lint) [![Build status](https://ci.appveyor.com/api/projects/status/mfb65fn2i8dc70xc/branch/master?svg=true)](https://ci.appveyor.com/project/brentlintner/vile-slim-lint/branch/master)
 
 [![score-badge](https://vile.io/brentlintner/vile-slim-lint/badges/score?token=9Gu6poQq8zVoeGTszNUR)](https://vile.io/brentlintner/vile-slim-lint) [![security-badge](https://vile.io/brentlintner/vile-slim-lint/badges/security?token=9Gu6poQq8zVoeGTszNUR)](https://vile.io/brentlintner/vile-slim-lint) [![coverage-badge](https://vile.io/brentlintner/vile-slim-lint/badges/coverage?token=9Gu6poQq8zVoeGTszNUR)](https://vile.io/brentlintner/vile-slim-lint) [![dependency-badge](https://vile.io/brentlintner/vile-slim-lint/badges/dependency?token=9Gu6poQq8zVoeGTszNUR)](https://vile.io/brentlintner/vile-slim-lint)
 
@@ -17,7 +17,7 @@ Currently, you need to have `slim-lint` installed manually.
 
 Example:
 
-    npm i vile-slim-lint
+    npm i @forthright/vile-slim-lint --save-dev
     gem install slim-lint
 
 Note: A good strategy is to use [bundler](http://bundler.io).

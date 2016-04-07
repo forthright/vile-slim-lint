@@ -1,2 +1,19 @@
 #!/usr/bin/env node
-require('./../.test/runner').run()
+var path = require("path")
+var Mocha = require("mocha")
+
+function run() {
+  var runner = new Mocha({
+    ui: "bdd",
+    reporter: "dot",
+    timeout: 10000
+  })
+
+  var spec = path.join(__dirname, "..", ".test", "spec.js")
+
+  runner.files = [ spec ]
+
+  runner.run(process.exit)
+}
+
+run()
