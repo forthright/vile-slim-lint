@@ -49,7 +49,6 @@ install:
   - ps: Install-Product node $env:nodejs_version
   - ps: npm install -g npm@$env:npm_version
   - ver && node --version && npm --version
-  - npm cache clean
   - npm install
 
 test_script:
