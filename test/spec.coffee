@@ -39,6 +39,7 @@ describe "slim-lint", ->
                               "-r"
                               "json"
                               "--no-color"
+                              "."
                             ]
             done()
 
@@ -57,6 +58,7 @@ describe "slim-lint", ->
                               "-c"
                               config_path
                               "--no-color"
+                              "."
                             ]
               done()
 
@@ -71,9 +73,9 @@ describe "slim-lint", ->
                               "-r"
                               "json"
                               "-e"
-                              "foo"
-                              "bar"
+                              "foo,bar"
                               "--no-color"
+                              "."
                             ]
               done()
 

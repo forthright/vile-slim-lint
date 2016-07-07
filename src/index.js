@@ -17,12 +17,16 @@ let slim_lint = (plugin_config) => {
   }
 
   if (!_.isEmpty(exclude)) {
-    opts.args = _.concat(opts.args, "-e", exclude)
+    opts.args = _.concat(opts.args, "-e", exclude.join(","))
   }
 
   opts.args.push("--no-color")
 
-  if (!_.isEmpty(paths)) opts.args = _.concat(opts.args, paths)
+  if (_.isEmpty(paths)) {
+    opts.args = _.concat(opts.args, ".")
+  } else {
+    opts.args = _.concat(opts.args, paths)
+  }
 
   return vile
     .spawn("slim-lint", opts)
