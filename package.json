@@ -18,7 +18,7 @@
     "lint-cov": "node bin/lint-cov",
     "test": "node bin/test",
     "test-cov": "node bin/test-cov",
-    "vile": "vile p -usi -x src:lib --nodecorations",
+    "vile": "vile p -us -x src:lib --nodecorations",
     "release-it": "release-it"
   },
   "keywords": [
