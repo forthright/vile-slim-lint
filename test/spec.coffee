@@ -42,6 +42,7 @@ describe "slim-lint", ->
                               "."
                             ]
             done()
+      return
 
     describe "with a custom config path", ->
       it "passes the path as a slim-lint cli option", (done) ->
@@ -61,6 +62,7 @@ describe "slim-lint", ->
                               "."
                             ]
               done()
+        return
 
     describe "with an ignore list", ->
       it "passes the exclude option as a slim-lint cli option", (done) ->
@@ -78,6 +80,7 @@ describe "slim-lint", ->
                               "."
                             ]
               done()
+        return
 
     describe "with an allow list", ->
       it "passes the file args to slim-lint", (done) ->
@@ -94,3 +97,4 @@ describe "slim-lint", ->
                               "bar"
                             ]
               done()
+        return
