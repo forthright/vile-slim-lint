@@ -32,7 +32,7 @@
     "lodash": "^4.16.6"
   },
   "devDependencies": {
-    "@forthright/vile": ">=0.10.2",
+    "@forthright/vile": ">=0.10.3",
     "@forthright/vile-coffeelint": ">=0.1.13",
     "@forthright/vile-comment": ">=0.1.16",
     "@forthright/vile-coverage": ">=0.2.13",
@@ -62,6 +62,6 @@
     "sinon-chai": "~2.8.0"
   },
   "peerDependencies": {
-    "@forthright/vile": ">=0.10.2"
+    "@forthright/vile": ">=0.10.3"
   }
 }
