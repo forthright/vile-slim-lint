@@ -3,7 +3,11 @@ slim_lint_json = require "./../fixtures/slim-lint-json"
 
 setup = (vile) ->
   vile.spawn.returns new Promise (resolve) ->
-    resolve(JSON.stringify slim_lint_json)
+    resolve({
+      code: 0
+      stdout: JSON.stringify slim_lint_json
+      stderr: ""
+    })
 
 issues = [
   {

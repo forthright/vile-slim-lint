@@ -30,7 +30,10 @@ let slim_lint = (plugin_config) => {
 
   return vile
     .spawn("slim-lint", opts)
-    .then((stdout) => stdout ? to_json(stdout) : { files: [] })
+    .then((spawn_data) => {
+      let stdout = _.get(spawn_data, "stdout")
+      return stdout ? to_json(stdout) : { files: [] }
+    })
 }
 
 let signature = (offense) => {
