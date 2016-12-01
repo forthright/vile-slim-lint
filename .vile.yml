@@ -30,6 +30,10 @@ vile:
     - typings
     - .vile.yml
 
+escomplex:
+  config:
+    use_maintainability_index: true
+
 depcheck:
   config:
     ignore_dev_deps: false

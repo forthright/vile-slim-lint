@@ -29,10 +29,10 @@
   ],
   "dependencies": {
     "bluebird": "~3.4.6",
-    "lodash": "^4.17.1"
+    "lodash": "^4.17.2"
   },
   "devDependencies": {
-    "@forthright/vile": ">=0.11.0",
+    "@forthright/vile": ">=0.11.2",
     "@forthright/vile-coffeelint": ">=0.1.13",
     "@forthright/vile-comment": ">=0.1.16",
     "@forthright/vile-coverage": ">=0.2.13",
@@ -53,8 +53,8 @@
     "coffee-script": "~1.11.1",
     "istanbul": "^0.4.5",
     "mimus": "~0.2.3",
-    "mocha": "~3.1.2",
-    "npm-check-updates": ">=2.8.6",
+    "mocha": "~3.2.0",
+    "npm-check-updates": ">=2.8.7",
     "release-it": "^2.5.1",
     "retire": "^1.2.10",
     "shelljs": "^0.7.5",
@@ -62,6 +62,6 @@
     "sinon-chai": "~2.8.0"
   },
   "peerDependencies": {
-    "@forthright/vile": ">=0.11.0"
+    "@forthright/vile": ">=0.11.2"
   }
 }
