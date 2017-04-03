@@ -58,6 +58,22 @@ slim-lint:
     - app/views/foo
 ```
 
+## Gotchas
+
+You might run into issues with the `RuboCop` linter enabled,
+as it generates tmp files that may get picked up by other Ruby
+plugins that could be running in parallel.
+
+Although it is a big trade off, disabling the linter should fix the issue.
+
+In your `.slim-lint.yml`:
+
+```yaml
+linters:
+  RuboCop:
+    enabled: false
+```
+
 ## Architecture
 
 This project is currently written in JavaScript. Slim-lint provides
