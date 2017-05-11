@@ -36,11 +36,12 @@ slim-lint:
 
 You can ignore files in your `.slim-lint.yml` config file.
 
-You can also use the `allow` setting:
+You can also use the `vile.ignore` or `slim-lint.ignore` setting:
 
 ```yaml
 slim-lint:
-  ignore: [ "lib" ]
+  ignore:
+    - lib
 ```
 
 ## Allowing Files
