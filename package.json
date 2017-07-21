@@ -1,6 +1,6 @@
 {
   "name": "vile-slim-lint",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Identify common style and maintainability issues in your Slim templates.",
   "main": "lib/index.js",
   "files": [
