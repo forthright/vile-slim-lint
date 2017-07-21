@@ -1,13 +1,12 @@
 # vile-slim-lint [![Circle CI](https://circleci.com/gh/forthright/vile-slim-lint.svg?style=shield&circle-token=1f9abaf70a595024e47e9f5163e4bc7cca2a4fad)](https://circleci.com/gh/forthright/vile-slim-lint) [![Build status](https://ci.appveyor.com/api/projects/status/mfb65fn2i8dc70xc/branch/master?svg=true)](https://ci.appveyor.com/project/brentlintner/vile-slim-lint/branch/master) [![score-badge](https://vile.io/api/v0/projects/vile-slim-lint/badges/score?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-slim-lint) [![security-badge](https://vile.io/api/v0/projects/vile-slim-lint/badges/security?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-slim-lint) [![coverage-badge](https://vile.io/api/v0/projects/vile-slim-lint/badges/coverage?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-slim-lint) [![dependency-badge](https://vile.io/api/v0/projects/vile-slim-lint/badges/dependency?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-slim-lint)
 
-A [vile](https://vile.io) plugin for [slim-lint](https://github.com/sds/slim-lint).
+A [Vile](https://vile.io) plugin for identifying common style and
+maintainability issues in your Slim templates (via [slim-lint](https://github.com/sds/slim-lint)).
 
 ## Requirements
 
-- [nodejs](http://nodejs.org)
-- [npm](http://npmjs.org)
-- [ruby](http://ruby-lang.org)
-- [rubygems](http://rubygems.org)
+- [Node.js](http://nodejs.org)
+- [Ruby](http://ruby-lang.org)
 
 ## Installation
 
@@ -18,7 +17,7 @@ Example:
     npm i -D vile vile-slim-lint
     gem install slim-lint
 
-Note: A good strategy is to use [bundler](http://bundler.io).
+Note: A good strategy is to use [Bundler](http://bundler.io).
 
 ## Config
 
@@ -75,7 +74,7 @@ linters:
 
 ## Versioning
 
-This project ascribes to [semantic versioning](http://semver.org).
+This project uses [Semver](http://semver.org).
 
 ## Licensing
 
@@ -102,8 +101,6 @@ Even if you are uncomfortable with code, an issue or question is welcome.
 
 ### Code Of Conduct
 
-This project ascribes to [contributor-covenant.org](http://contributor-covenant.org).
-
 By participating in this project you agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ### Maintainers
@@ -117,10 +114,10 @@ a JSON CLI output that is currently used until a more ideal
 IPC option is implemented.
 
 - `bin` houses any shell based scripts
-- `src` is es6+ syntax compiled with [babel](https://babeljs.io)
+- `src` is es6+ syntax compiled with [Babel](https://babeljs.io)
 - `lib` generated js library
 
-## Hacking
+## Developing
 
     cd vile-slim-lint
     npm install

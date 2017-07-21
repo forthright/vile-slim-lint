@@ -1,7 +1,7 @@
 {
   "name": "vile-slim-lint",
   "version": "0.3.2",
-  "description": "A vile plugin for slim-lint",
+  "description": "Identify common style and maintainability issues in your Slim templates.",
   "main": "lib/index.js",
   "files": [
     "lib",
