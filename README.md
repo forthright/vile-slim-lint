@@ -19,6 +19,10 @@ Example:
 
 Note: A good strategy is to use [Bundler](http://bundler.io).
 
+## Usage
+
+    npx vile a -p slim-lint
+
 ## Config
 
 By default, `.slim-lint.yml` should be picked up without any
